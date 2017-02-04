@@ -11,7 +11,7 @@ http.createServer(function (req, res) {
 }).listen(6666);
 
 handler.on('error', function (err) {
-  console.error('Error:', err.message)
+  console.error('Error:', err.error)
 });
 
 // 监听到push事件的时候执行我们的自动化脚本
