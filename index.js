@@ -21,7 +21,7 @@ handler.on('push', function (event) {
     event.payload.ref);
 
   runCommand('sh', ['./auto_build.sh'], function (txt) {
-    console.log(txt);
+    console.log('runcommand callback',txt)
   });
 
 });
