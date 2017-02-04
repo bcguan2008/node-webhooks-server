@@ -2,7 +2,7 @@ var http = require('http');
 var spawn = require('child_process').spawn;
 var createHandler = require('github-webhook-handler');
 
-var handler = createHandler({ path: '/auto_build', secret: '' });
+var handler = createHandler({ path: '/auto_build', secret: 'gbc' });
 http.createServer(function (req, res) {
   handler(req, res, function (err) {
     res.statusCode = 404;
