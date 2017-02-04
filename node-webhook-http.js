@@ -68,15 +68,15 @@ function create (options) {
         return hasError(err.message)
       }
 
-      var obj
+      var obj;
       var computedSig = new Buffer(signBlob(options.secret, data))
 
       if (!bufferEq(new Buffer(sig), computedSig))
         return hasError('X-Hub-Signature does not match blob signature')
 
       try {
-        console.log(data.toString())
         obj = JSON.parse(data.toString())
+
       } catch (e) {
         return hasError(e)
       }
